@@ -1,0 +1,45 @@
+\ProvidesPackage{style}
+
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\geometry{
+     letterpaper,
+     left=1in,
+     top=0.5in,
+     bottom=0.5in
+}
+
+% Set font to Helvetica
+\usepackage[scaled]{helvet}
+\usepackage[T1]{fontenc}
+
+\renewcommand\familydefault{\sfdefault}
+
+\definecolor{darkgrey}{rgb}{0.412,0.412,0.412}
+
+\newcommand{\heading}[1]{\begin{flushleft}
+    \vspace{10pt}
+    \small\color{darkgrey} #1
+    \vspace{-8pt}
+\end{flushleft}}
+
+% This is taken from https://github.com/liantze/AltaCV
+\newcommand{\cvtag}[1]{%
+  \tikz[baseline]\node[anchor=base,draw=gray!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{\color{darkgrey}#1};
+}
+
+\titleformat{\section}{\normalsize\bfseries}{}{0em}{}
+\titlespacing{\section}{0em}{1em}{0em}
+
+\titleformat{\subsection}{\color{darkgrey}}{}{0em}{\vspace{-4pt}}
+
+\setitemize{noitemsep,topsep=0pt,parsep=2pt,partopsep=0pt}
